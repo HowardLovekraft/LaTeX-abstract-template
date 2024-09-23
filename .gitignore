@@ -1,0 +1,8 @@
+# TeX compilator's files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.pdf

@@ -1,11 +1,12 @@
 \documentclass[12pt]{article}
 
-\include{cmap}
+\include{cmap}  % Включает русский текст при копировании
 \usepackage[unicode]{hyperref}
 
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{mathtext, mathtools}
 \usepackage{xcolor, listings}
+\usepackage{minted}  % Современная альтернатива listings 
 \usepackage{algorithm2e}
 \usepackage{pgfplots}
 
@@ -15,7 +16,7 @@
 
 \usepackage{indentfirst}
 \usepackage{paracol}  % Позволяет писать в несколько колонок
-\usepackage{mdrfamed}  % Добавляет боксы для текста
+\usepackage{mdrfamed}  % Добавляет рамки для текста
 
 \usepackage{graphicx}
 \usepackage{geometry}
@@ -38,7 +39,7 @@
 \theoremstyle{plain}
 \newtheorem{theorem}{Теорема}[section]
 \newtheorem{corollary}{Следствие}[theorem]
-\newtheorem*{definition}{Определение}
+\newtheorem*{definition}{def}
 
 \newenvironment{eq_array}{\begin{equation*}\begin{array}{l}}{\end{array}\end{equation*}}
 
@@ -61,4 +62,10 @@
 	breakatwhitespace=false, % переносить строки только если есть пробел
 	escapeinside={\%*}{*)},   % если нужно добавить комментарии в коде,
 	keepspaces=true
+}
+
+\setminted{
+	breaklines=true,
+	fontsize=\small,
+	frame=single
 }
